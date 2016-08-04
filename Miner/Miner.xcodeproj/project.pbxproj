@@ -502,6 +502,7 @@
 				BEDBED841D52F37500417E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEDBED851D52F37500417E56 /* Build configuration list for PBXNativeTarget "MinerTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +511,7 @@
 				BEDBED871D52F37500417E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEDBED881D52F37500417E56 /* Build configuration list for PBXNativeTarget "MinerUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +520,7 @@
 				BEDBED8A1D52F37500417E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
