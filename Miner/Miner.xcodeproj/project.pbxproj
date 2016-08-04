@@ -101,14 +101,9 @@
 		BEDBED581D52F37400417E56 /* Miner */ = {
 			isa = PBXGroup;
 			children = (
-				BEDBED591D52F37400417E56 /* AppDelegate.swift */,
 				BEDBED5B1D52F37400417E56 /* GameScene.sks */,
 				BEDBED5D1D52F37400417E56 /* GameScene.swift */,
-				BEDBED5F1D52F37400417E56 /* GameViewController.swift */,
-				BEDBED611D52F37400417E56 /* Main.storyboard */,
-				BEDBED641D52F37400417E56 /* Assets.xcassets */,
-				BEDBED661D52F37400417E56 /* LaunchScreen.storyboard */,
-				BEDBED691D52F37400417E56 /* Info.plist */,
+				BEDBEDB81D52FA3F00417E56 /* supportingFile */,
 			);
 			path = Miner;
 			sourceTree = "<group>";
@@ -129,6 +124,19 @@
 				BEDBED7F1D52F37500417E56 /* Info.plist */,
 			);
 			path = MinerUITests;
+			sourceTree = "<group>";
+		};
+		BEDBEDB81D52FA3F00417E56 /* supportingFile */ = {
+			isa = PBXGroup;
+			children = (
+				BEDBED591D52F37400417E56 /* AppDelegate.swift */,
+				BEDBED5F1D52F37400417E56 /* GameViewController.swift */,
+				BEDBED611D52F37400417E56 /* Main.storyboard */,
+				BEDBED641D52F37400417E56 /* Assets.xcassets */,
+				BEDBED661D52F37400417E56 /* LaunchScreen.storyboard */,
+				BEDBED691D52F37400417E56 /* Info.plist */,
+			);
+			name = supportingFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
