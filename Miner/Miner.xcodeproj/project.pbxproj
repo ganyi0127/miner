@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BEDBED5A1D52F37400417E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBED591D52F37400417E56 /* AppDelegate.swift */; };
-		BEDBED5C1D52F37400417E56 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BEDBED5B1D52F37400417E56 /* GameScene.sks */; };
 		BEDBED5E1D52F37400417E56 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBED5D1D52F37400417E56 /* GameScene.swift */; };
 		BEDBED601D52F37400417E56 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBED5F1D52F37400417E56 /* GameViewController.swift */; };
 		BEDBED631D52F37400417E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDBED611D52F37400417E56 /* Main.storyboard */; };
@@ -16,6 +15,10 @@
 		BEDBED681D52F37400417E56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDBED661D52F37400417E56 /* LaunchScreen.storyboard */; };
 		BEDBED731D52F37500417E56 /* MinerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBED721D52F37500417E56 /* MinerTests.swift */; };
 		BEDBED7E1D52F37500417E56 /* MinerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBED7D1D52F37500417E56 /* MinerUITests.swift */; };
+		BEFE88541D5D58ED002D485D /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE88531D5D58ED002D485D /* Background.swift */; };
+		BEFE88561D5D5962002D485D /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE88551D5D5962002D485D /* Configure.swift */; };
+		BEFE88581D5D5A34002D485D /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE88571D5D5A34002D485D /* Cube.swift */; };
+		BEFE885C1D5D6BCE002D485D /* CubeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFE885B1D5D6BCE002D485D /* CubeLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 /* Begin PBXFileReference section */
 		BEDBED561D52F37400417E56 /* Miner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Miner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDBED591D52F37400417E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BEDBED5B1D52F37400417E56 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		BEDBED5D1D52F37400417E56 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		BEDBED5F1D52F37400417E56 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		BEDBED621D52F37400417E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		BEDBED791D52F37500417E56 /* MinerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDBED7D1D52F37500417E56 /* MinerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinerUITests.swift; sourceTree = "<group>"; };
 		BEDBED7F1D52F37500417E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEFE88531D5D58ED002D485D /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		BEFE88551D5D5962002D485D /* Configure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
+		BEFE88571D5D5A34002D485D /* Cube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
+		BEFE885B1D5D6BCE002D485D /* CubeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,8 @@
 		BEDBED581D52F37400417E56 /* Miner */ = {
 			isa = PBXGroup;
 			children = (
-				BEDBED5B1D52F37400417E56 /* GameScene.sks */,
 				BEDBED5D1D52F37400417E56 /* GameScene.swift */,
+				BEFE88521D5D58CD002D485D /* Layer */,
 				BEDBEDB81D52FA3F00417E56 /* supportingFile */,
 			);
 			path = Miner;
@@ -135,8 +141,19 @@
 				BEDBED641D52F37400417E56 /* Assets.xcassets */,
 				BEDBED661D52F37400417E56 /* LaunchScreen.storyboard */,
 				BEDBED691D52F37400417E56 /* Info.plist */,
+				BEFE88551D5D5962002D485D /* Configure.swift */,
 			);
 			name = supportingFile;
+			sourceTree = "<group>";
+		};
+		BEFE88521D5D58CD002D485D /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				BEFE88531D5D58ED002D485D /* Background.swift */,
+				BEFE885B1D5D6BCE002D485D /* CubeLayer.swift */,
+				BEFE88571D5D5A34002D485D /* Cube.swift */,
+			);
+			name = Layer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +260,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEDBED5C1D52F37400417E56 /* GameScene.sks in Resources */,
 				BEDBED681D52F37400417E56 /* LaunchScreen.storyboard in Resources */,
 				BEDBED651D52F37400417E56 /* Assets.xcassets in Resources */,
 				BEDBED631D52F37400417E56 /* Main.storyboard in Resources */,
@@ -273,7 +289,11 @@
 			files = (
 				BEDBED5E1D52F37400417E56 /* GameScene.swift in Sources */,
 				BEDBED601D52F37400417E56 /* GameViewController.swift in Sources */,
+				BEFE88581D5D5A34002D485D /* Cube.swift in Sources */,
 				BEDBED5A1D52F37400417E56 /* AppDelegate.swift in Sources */,
+				BEFE885C1D5D6BCE002D485D /* CubeLayer.swift in Sources */,
+				BEFE88541D5D58ED002D485D /* Background.swift in Sources */,
+				BEFE88561D5D5962002D485D /* Configure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +522,7 @@
 				BEDBED841D52F37500417E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEDBED851D52F37500417E56 /* Build configuration list for PBXNativeTarget "MinerTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +531,7 @@
 				BEDBED871D52F37500417E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEDBED881D52F37500417E56 /* Build configuration list for PBXNativeTarget "MinerUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +540,7 @@
 				BEDBED8A1D52F37500417E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
