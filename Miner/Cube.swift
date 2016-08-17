@@ -129,13 +129,17 @@ class Cube: SKSpriteNode {
             return
         }
         
-        let colorRand = Int(arc4random_uniform(5))
-        let toColor = cubeColors[colorRand]
+        var colorRand:Int
+        var toColor:UIColor
+        var toType:CubeType?
         
-        //类型不同，则变换，否则跳过
-        guard let toType = CubeType(rawValue: colorRand), curType = currentType where curType != toType else{
-            return
-        }
+        //类型相同，则变换，否则跳过
+        repeat{
+            
+            colorRand = Int(arc4random_uniform(5))
+            toColor = cubeColors[colorRand]
+            toType = CubeType(rawValue: colorRand)
+        }while toType == currentType
         
         transformed = true
         
