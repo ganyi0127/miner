@@ -20,8 +20,13 @@ class CubeLayer: SKNode {
     var distroyCubeList = [Cube]()
     
     //MARK:是否为活动状态
-    var action = true
+    var fallAction = false
+    var checkAction = false
     
+    //MARK:定时任务
+    var task:Task?
+    
+    //MARK:init-------------------------------------------------
     override init() {
         super.init()
         
@@ -33,6 +38,8 @@ class CubeLayer: SKNode {
         
         position = .zero
         zPosition = ZPos.cube
+     
+     
     }
     
     private func createContents(){
@@ -49,7 +56,7 @@ class CubeLayer: SKNode {
             matrix.append(xMatrix)
         }
 
-        action = false
+        fallAction = false
     }
     
     //MARK:测试用
@@ -68,28 +75,66 @@ class CubeLayer: SKNode {
         }
     }
     
+    //MARK:随机变幻cube
+    private func choiceCubeToTransform(){
+        let min = 3
+        let max = Int(arc4random_uniform(10)) + min
+        
+        var needTransformCubes = [Cube]()
+        
+        while needTransformCubes.count < max {
+            
+            let count = UInt32(cubeList.count)
+            let randIndex = Int(arc4random_uniform(count))
+            let cube = cubeList[randIndex]
+            if !needTransformCubes.contains(cube) {
+                needTransformCubes.append(cube)
+            }
+        }
+        
+        needTransformCubes.forEach(){
+            cube in
+            
+            cube.transform()
+        }
+    }
+    
+    //MARK:更新
     func update(currentTime: CFTimeInterval){
         
-        if !action{
+        if !fallAction && !checkAction{
             
             if cubeList.count < widthCount * heightCount{
-                fullCubeList(false)
-
+                if fallCubeList(false){
+                    
+                    delay(1){
+                        self.fallAction = false
+                    }
+                }
             }else{
-                
-                check()
+                check(){
+                    
+                    //1秒后调用变幻
+                    delay(1){
+                        
+                        self.choiceCubeToTransform()
+                        
+                        delay(0.5){
+                            self.checkAction = false
+                        }
+                    }
+                }
             }
-            
         }
     }
     
     //MARK:补充方块
-    private func fullCubeList(full:Bool) -> Bool{
-        
-        action = true
+    private func fallCubeList(full:Bool) -> Bool{
+
+        fallAction = true
         
         guard !full else{
-            action = false
+            fallAction = false
             return true
         }
         
@@ -122,19 +167,18 @@ class CubeLayer: SKNode {
                     
                     matrix[xIndex][yIndex] = true
                     
-                    return fullCubeList(false)
+                    return fallCubeList(false)
                 }
             }
         }
         
-        action = false
         return true
     }
     
     //MARK:检查是否有销毁
-    private func check(){
+    private func check(closure:()->()){
         
-        action = true
+        checkAction = true
         
         for xIndex in 0..<widthCount{
             
@@ -164,7 +208,7 @@ class CubeLayer: SKNode {
                     index += 1
                 }
                 
-                if distroyCubes.count >= 2{
+                if distroyCubes.count >= 3{
                     distroyCubes.forEach(){
                         cube in
                         cube.needDistroy = true
@@ -190,7 +234,7 @@ class CubeLayer: SKNode {
                     index += 1
                 }
                 
-                if distroyCubes.count >= 2{
+                if distroyCubes.count >= 3{
                     distroyCubes.forEach(){
                         cube in
                         cube.needDistroy = true
@@ -207,8 +251,8 @@ class CubeLayer: SKNode {
             matrix[cube.coordinate!.x!][cube.coordinate!.y!] = false
             cube.distroy()
         }
-        
-        action = false
+    
+        closure()
     }
     
     //MARK:添加新方块
