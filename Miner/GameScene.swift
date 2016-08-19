@@ -10,8 +10,9 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-    let background = Background()
+    private let background = Background()
     let cubeLayer = CubeLayer()
+    let showLayer = ShowLayer()
     
     override init() {
         super.init(size: winSize)
@@ -35,12 +36,16 @@ class GameScene: SKScene {
         
         addChild(background)
         addChild(cubeLayer)
+        addChild(showLayer)
+        
+        showLayer.successDistroy = Distroy(heart: 5, red: 2, green: 0, blue: 12, yellow: 13, black: 5)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        cubeLayer.removeAll()
-
+        if !isBegin{
+            isBegin = true
+        }
     }
    
     override func update(currentTime: CFTimeInterval) {

@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		BE4112D41D61B37B00550A66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4112D21D61B37B00550A66 /* Main.storyboard */; };
 		BE4113121D6311E200550A66 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4113111D6311E200550A66 /* Timer.swift */; };
+		BE4113151D643E2E00550A66 /* ShowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4113141D643E2D00550A66 /* ShowLayer.swift */; };
+		BE4113171D643E9100550A66 /* Lover.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4113161D643E9100550A66 /* Lover.swift */; };
+		BE4113981D65913A00550A66 /* ColorCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4113971D65913A00550A66 /* ColorCube.swift */; };
+		BE41139A1D65A98C00550A66 /* SelectCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4113991D65A98C00550A66 /* SelectCube.swift */; };
+		BE41139C1D65B13B00550A66 /* Heart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE41139B1D65B13B00550A66 /* Heart.swift */; };
+		BE41139F1D66B8B800550A66 /* VictoryNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE41139E1D66B8B800550A66 /* VictoryNode.swift */; };
+		BE4113A11D66C01E00550A66 /* VictoryColorCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4113A01D66C01E00550A66 /* VictoryColorCube.swift */; };
 		BEDBED5A1D52F37400417E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBED591D52F37400417E56 /* AppDelegate.swift */; };
 		BEDBED5E1D52F37400417E56 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBED5D1D52F37400417E56 /* GameScene.swift */; };
 		BEDBED601D52F37400417E56 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDBED5F1D52F37400417E56 /* GameViewController.swift */; };
@@ -42,6 +49,13 @@
 /* Begin PBXFileReference section */
 		BE4112D31D61B37B00550A66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE4113111D6311E200550A66 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		BE4113141D643E2D00550A66 /* ShowLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowLayer.swift; sourceTree = "<group>"; };
+		BE4113161D643E9100550A66 /* Lover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lover.swift; sourceTree = "<group>"; };
+		BE4113971D65913A00550A66 /* ColorCube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCube.swift; sourceTree = "<group>"; };
+		BE4113991D65A98C00550A66 /* SelectCube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCube.swift; sourceTree = "<group>"; };
+		BE41139B1D65B13B00550A66 /* Heart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heart.swift; sourceTree = "<group>"; };
+		BE41139E1D66B8B800550A66 /* VictoryNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VictoryNode.swift; sourceTree = "<group>"; };
+		BE4113A01D66C01E00550A66 /* VictoryColorCube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VictoryColorCube.swift; sourceTree = "<group>"; };
 		BEDBED561D52F37400417E56 /* Miner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Miner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDBED591D52F37400417E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDBED5D1D52F37400417E56 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -86,6 +100,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE4113131D643DF400550A66 /* My99 */ = {
+			isa = PBXGroup;
+			children = (
+				BE4113141D643E2D00550A66 /* ShowLayer.swift */,
+				BE4113971D65913A00550A66 /* ColorCube.swift */,
+				BE4113991D65A98C00550A66 /* SelectCube.swift */,
+				BE4113161D643E9100550A66 /* Lover.swift */,
+				BE41139B1D65B13B00550A66 /* Heart.swift */,
+				BE41139D1D66B89B00550A66 /* 胜利条件展示 */,
+			);
+			name = My99;
+			sourceTree = "<group>";
+		};
+		BE41139D1D66B89B00550A66 /* 胜利条件展示 */ = {
+			isa = PBXGroup;
+			children = (
+				BE41139E1D66B8B800550A66 /* VictoryNode.swift */,
+				BE4113A01D66C01E00550A66 /* VictoryColorCube.swift */,
+			);
+			name = "胜利条件展示";
+			sourceTree = "<group>";
+		};
 		BEDBED4D1D52F37400417E56 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +147,7 @@
 			children = (
 				BEDBED5D1D52F37400417E56 /* GameScene.swift */,
 				BEFE88521D5D58CD002D485D /* Layer */,
+				BE4113131D643DF400550A66 /* My99 */,
 				BEDBEDB81D52FA3F00417E56 /* supportingFile */,
 			);
 			path = Miner;
@@ -290,13 +327,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE4113171D643E9100550A66 /* Lover.swift in Sources */,
 				BEDBED5E1D52F37400417E56 /* GameScene.swift in Sources */,
 				BEDBED601D52F37400417E56 /* GameViewController.swift in Sources */,
 				BEFE88581D5D5A34002D485D /* Cube.swift in Sources */,
+				BE4113981D65913A00550A66 /* ColorCube.swift in Sources */,
 				BEDBED5A1D52F37400417E56 /* AppDelegate.swift in Sources */,
+				BE41139C1D65B13B00550A66 /* Heart.swift in Sources */,
+				BE41139A1D65A98C00550A66 /* SelectCube.swift in Sources */,
+				BE41139F1D66B8B800550A66 /* VictoryNode.swift in Sources */,
+				BE4113151D643E2E00550A66 /* ShowLayer.swift in Sources */,
 				BEFE885C1D5D6BCE002D485D /* CubeLayer.swift in Sources */,
 				BEFE88541D5D58ED002D485D /* Background.swift in Sources */,
 				BEFE88561D5D5962002D485D /* Configure.swift in Sources */,
+				BE4113A11D66C01E00550A66 /* VictoryColorCube.swift in Sources */,
 				BE4113121D6311E200550A66 /* Timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

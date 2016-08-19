@@ -17,6 +17,14 @@ enum CubeType:Int {
     case Frozen
 }
 
+//MARK:可变颜色
+let cubeColors:[UIColor] = [
+    .redColor(),
+    .greenColor(),
+    .blueColor(),
+    .yellowColor(),
+    .blackColor()
+]
 
 class Cube: SKSpriteNode {
     
@@ -26,14 +34,6 @@ class Cube: SKSpriteNode {
         var y:Int?
     }
     
-    //MARK:可变颜色
-    private let cubeColors:[UIColor] = [
-        .redColor(),
-        .greenColor(),
-        .blueColor(),
-        .yellowColor(),
-        .blackColor()
-    ]
     
     //宽度百分比
     private var widthPercent:CGFloat = 0.12
@@ -83,6 +83,18 @@ class Cube: SKSpriteNode {
     //MARK:标记是否需要被消除
     var needDistroy = false
     
+    //MARK:标记是否带♥️
+    var marked = false{
+        didSet{
+            guard marked else{
+                return
+            }
+            
+            let heart = Heart()
+            addChild(heart)
+        }
+    }
+    
     //MARK:初始化----------------------------------------------------------
     init(x:Int,y:Int){
         super.init(texture: nil, color: .whiteColor(), size: CGSize(width: winSize.width * widthPercent, height: winSize.width * widthPercent))
@@ -122,28 +134,34 @@ class Cube: SKSpriteNode {
         
     }
     
-    //MARK:自动变换颜色
-    func transform(){
+    //MARK:自动变换颜色 nil:随机
+    func transform(colorIndex:Int?){
         
         guard let flag = transformed where !flag else{
             return
         }
         
         var colorRand:Int
-        var toColor:UIColor
+        var toColor:UIColor?
         var toType:CubeType?
         
-        //类型相同，则变换，否则跳过
-        repeat{
-            
-            colorRand = Int(arc4random_uniform(5))
-            toColor = cubeColors[colorRand]
-            toType = CubeType(rawValue: colorRand)
-        }while toType == currentType
+        //判断是否为随机或指定颜色
+        if let index = colorIndex{
+            toColor = cubeColors[index]
+            toType = CubeType(rawValue: index)
+        }else{
+            //类型相同，则变换，否则跳过
+            repeat{
+                
+                colorRand = Int(arc4random_uniform(5))
+                toColor = cubeColors[colorRand]
+                toType = CubeType(rawValue: colorRand)
+            }while toType == currentType
+        }
         
         transformed = true
         
-        let colorAct = SKAction.colorizeWithColor(toColor, colorBlendFactor: 1.0, duration: 1.0)
+        let colorAct = SKAction.colorizeWithColor(toColor!, colorBlendFactor: 1.0, duration: 1.0)
         runAction(colorAct){
             self.currentType = toType
             self.transformed = false
