@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3281FA4F1D6A8EFF009E5368 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281FA4E1D6A8EFF009E5368 /* Button.swift */; };
+		3281FA531D6A91F0009E5368 /* GameoverLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3281FA521D6A91F0009E5368 /* GameoverLayer.swift */; };
 		BE4112D41D61B37B00550A66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4112D21D61B37B00550A66 /* Main.storyboard */; };
 		BE4113121D6311E200550A66 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4113111D6311E200550A66 /* Timer.swift */; };
 		BE4113151D643E2E00550A66 /* ShowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4113141D643E2D00550A66 /* ShowLayer.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3281FA4E1D6A8EFF009E5368 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		3281FA521D6A91F0009E5368 /* GameoverLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameoverLayer.swift; path = ../GameoverLayer.swift; sourceTree = "<group>"; };
 		BE4112D31D61B37B00550A66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE4113111D6311E200550A66 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		BE4113141D643E2D00550A66 /* ShowLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowLayer.swift; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3281FA4D1D6A8EDB009E5368 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				3281FA521D6A91F0009E5368 /* GameoverLayer.swift */,
+				3281FA4E1D6A8EFF009E5368 /* Button.swift */,
+			);
+			name = menu;
+			sourceTree = "<group>";
+		};
 		BE4113131D643DF400550A66 /* My99 */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,18 +121,18 @@
 				BE4113991D65A98C00550A66 /* SelectCube.swift */,
 				BE4113161D643E9100550A66 /* Lover.swift */,
 				BE41139B1D65B13B00550A66 /* Heart.swift */,
-				BE41139D1D66B89B00550A66 /* 胜利条件展示 */,
+				BE41139D1D66B89B00550A66 /* reward */,
 			);
 			name = My99;
 			sourceTree = "<group>";
 		};
-		BE41139D1D66B89B00550A66 /* 胜利条件展示 */ = {
+		BE41139D1D66B89B00550A66 /* reward */ = {
 			isa = PBXGroup;
 			children = (
 				BE41139E1D66B8B800550A66 /* VictoryNode.swift */,
 				BE4113A01D66C01E00550A66 /* VictoryColorCube.swift */,
 			);
-			name = "胜利条件展示";
+			name = reward;
 			sourceTree = "<group>";
 		};
 		BEDBED4D1D52F37400417E56 = {
@@ -148,6 +161,7 @@
 				BEDBED5D1D52F37400417E56 /* GameScene.swift */,
 				BEFE88521D5D58CD002D485D /* Layer */,
 				BE4113131D643DF400550A66 /* My99 */,
+				3281FA4D1D6A8EDB009E5368 /* menu */,
 				BEDBEDB81D52FA3F00417E56 /* supportingFile */,
 			);
 			path = Miner;
@@ -330,6 +344,7 @@
 				BE4113171D643E9100550A66 /* Lover.swift in Sources */,
 				BEDBED5E1D52F37400417E56 /* GameScene.swift in Sources */,
 				BEDBED601D52F37400417E56 /* GameViewController.swift in Sources */,
+				3281FA4F1D6A8EFF009E5368 /* Button.swift in Sources */,
 				BEFE88581D5D5A34002D485D /* Cube.swift in Sources */,
 				BE4113981D65913A00550A66 /* ColorCube.swift in Sources */,
 				BEDBED5A1D52F37400417E56 /* AppDelegate.swift in Sources */,
@@ -342,6 +357,7 @@
 				BEFE88561D5D5962002D485D /* Configure.swift in Sources */,
 				BE4113A11D66C01E00550A66 /* VictoryColorCube.swift in Sources */,
 				BE4113121D6311E200550A66 /* Timer.swift in Sources */,
+				3281FA531D6A91F0009E5368 /* GameoverLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

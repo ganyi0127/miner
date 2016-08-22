@@ -389,6 +389,11 @@ extension CubeLayer{
                 return
             }
             
+            //避免同时变换两次，或方块黑洞(冰冻)
+            guard let transformed = cube.transformed where !transformed else{
+                return
+            }
+            
             //获取已选择的颜色，或默认为第一个颜色
             if let colorIndex:Int = gameScene.showLayer.removeColorCube(){
                 

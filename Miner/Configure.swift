@@ -13,6 +13,9 @@ let viewSize = UIScreen.mainScreen().bounds.size
 let winSize = CGSize(width: 1242, height: 2208)
 let showSize = CGSize(width: 1242, height: 2208 * 0.15)
 
+let filemanager = NSFileManager.defaultManager()
+let notification = NSNotificationCenter.defaultCenter()
+
 //MARK:游戏控制
 var isBegin = false
 

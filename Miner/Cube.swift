@@ -13,6 +13,7 @@ enum CubeType:Int {
     case Green
     case Blue
     case Yellow
+    case Purple
     case Black
     case Frozen
 }
@@ -38,7 +39,7 @@ class Cube: SKSpriteNode {
     }
     
     //MARK:标记变换，仅变换颜色
-    private var transformed:Bool?
+    var transformed:Bool?
     
     //MARK:方块类型,根据类型来切换固有颜色,Frozen切换贴图
     var currentType:CubeType?{
@@ -50,7 +51,10 @@ class Cube: SKSpriteNode {
             
             switch type {
             case .Frozen:
-                //切换冰冻贴图
+                transformed = nil
+                texture = frozenTex
+            case .Black:
+                //切换黑洞贴图
                 transformed = nil
                 texture = frozenTex
             default:
@@ -108,9 +112,16 @@ class Cube: SKSpriteNode {
     
     private func config(){
         
-        //初始化类型与颜色
-        let rand = Int(arc4random_uniform(6))
-        currentType = CubeType(rawValue: rand)
+        //初始化类型与颜色 普通方块概率 于 特殊方块概率
+        var rand:Int?
+        if arc4random_uniform(10) < 9 {
+            //五种基础方块
+            rand = Int(arc4random_uniform(5))
+        }else{
+            //两种特殊方块
+            rand = Int(arc4random_uniform(2)) + 5
+        }
+        currentType = CubeType(rawValue: rand!)
         
         //初始化位置
         zPosition = 1
