@@ -14,23 +14,9 @@ class GameViewController: UIViewController {
     let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-
-        delegate.blockRotation = true
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        delegate.blockRotation = false
-        UIDevice.currentDevice().setValue(UIInterfaceOrientation.Portrait.rawValue, forKey: "orientation")
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-
         
-        let skView = self.view as! SKView
+        let skView = view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true
@@ -38,6 +24,17 @@ class GameViewController: UIViewController {
         let scene = GameScene()
         scene.scaleMode = .AspectFill
         skView.presentScene(scene)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+     
+     
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+     
     }
 
     override func viewDidAppear(animated: Bool) {

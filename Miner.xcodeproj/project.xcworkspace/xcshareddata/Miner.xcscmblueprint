@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E9CDAD31FBE564EB5D84C2311B85DDB8D080DE94",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E9CDAD31FBE564EB5D84C2311B85DDB8D080DE94" : 0,
+    "60154674589A839113548E6CA5F06D491810DFCE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AB981625-1D3F-42E3-99C9-D704F0ACF63B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E9CDAD31FBE564EB5D84C2311B85DDB8D080DE94" : "miner\/",
+    "60154674589A839113548E6CA5F06D491810DFCE" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Miner",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Miner.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ganyi0127\/Miner",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "60154674589A839113548E6CA5F06D491810DFCE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ganyi0127\/miner.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E9CDAD31FBE564EB5D84C2311B85DDB8D080DE94"
+    }
+  ]
+}
