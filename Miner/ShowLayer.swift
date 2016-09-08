@@ -9,29 +9,6 @@
 import SpriteKit
 class ShowLayer: SKNode {
     
-    //选择的颜色
-//    private var selectColorIndex:Int?
-    
-    //选择的位置
-//    private var selectListIndex:Int?{
-//        didSet{
-//            
-//            guard let index = selectListIndex else{
-//                
-//                selectCube?.position = colorCubeList[0].position
-//                
-//                return
-//            }
-//            
-//            if selectCube == nil{
-//                selectCube = SelectCube()
-//                addChild(selectCube!)
-//            }
-//            
-//            selectCube?.position = colorCubeList[index].position
-//        }
-//    }
-    
     //选择的colorCube
     private var selectColorCube:ColorCube?{
         didSet{
@@ -82,7 +59,7 @@ class ShowLayer: SKNode {
                 successDistroy.green <= 0 &&
                 successDistroy.blue <= 0 &&
                 successDistroy.yellow <= 0 &&
-                successDistroy.black <= 0{
+                successDistroy.purple <= 0{
                 //游戏胜利
                 
             }

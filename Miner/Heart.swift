@@ -21,5 +21,6 @@ class Heart: SKSpriteNode {
     private func config(){
         
         zPosition = 2
+        
     }
 }

@@ -38,10 +38,10 @@ class VictoryNode: SKSpriteNode {
                 yelloVictoryColorCube?.position = CGPoint(x: size.width / 6 * 4 - size.width / 2, y: 0)
                 addChild(yelloVictoryColorCube!)
             }
-            if blackVictoryColorCube == nil{
-                blackVictoryColorCube = VictoryColorCube(colorIndex: 4, cubeCount: distroy.black)
-                blackVictoryColorCube?.position = CGPoint(x: size.width / 6 * 5 - size.width / 2, y: 0)
-                addChild(blackVictoryColorCube!)
+            if purpleVictoryColorCube == nil{
+                purpleVictoryColorCube = VictoryColorCube(colorIndex: 4, cubeCount: distroy.purple)
+                purpleVictoryColorCube?.position = CGPoint(x: size.width / 6 * 5 - size.width / 2, y: 0)
+                addChild(purpleVictoryColorCube!)
             }
             
             heartVictoryColorCube?.count = distroy.heart
@@ -49,7 +49,7 @@ class VictoryNode: SKSpriteNode {
             greenVictoryColorCube?.count = distroy.green
             blueVictoryColorCube?.count = distroy.blue
             yelloVictoryColorCube?.count = distroy.yellow
-            blackVictoryColorCube?.count = distroy.black
+            purpleVictoryColorCube?.count = distroy.purple
         }
     }
     
@@ -58,7 +58,7 @@ class VictoryNode: SKSpriteNode {
     private var greenVictoryColorCube:VictoryColorCube?
     private var blueVictoryColorCube:VictoryColorCube?
     private var yelloVictoryColorCube:VictoryColorCube?
-    private var blackVictoryColorCube:VictoryColorCube?
+    private var purpleVictoryColorCube:VictoryColorCube?
     
     init(){
         

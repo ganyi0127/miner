@@ -69,10 +69,9 @@ class Lover: SKSpriteNode {
             
             var cube:Cube?
            
-                
-                let index = Int(arc4random_uniform(UInt32(cubeListCount)))
-                cube = copyList[index]
-           
+            let index = Int(arc4random_uniform(UInt32(cubeListCount)))
+            cube = copyList[index]
+            
             
             mainThread(){
                 

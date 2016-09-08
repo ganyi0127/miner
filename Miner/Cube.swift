@@ -190,9 +190,12 @@ class Cube: SKSpriteNode {
     //MARK:消除
     func distroy(){
         
+        let fadeOut = SKAction.fadeOutWithDuration(0.5)
         let rmAct = SKAction.removeFromParent()
         
-        runAction(rmAct)
+        let action = SKAction.sequence([fadeOut, rmAct])
+        
+        runAction(action)
     }
     
     required init?(coder aDecoder: NSCoder) {

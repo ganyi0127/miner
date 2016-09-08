@@ -14,7 +14,7 @@ struct Distroy {
     var green = 0
     var blue = 0
     var yellow = 0
-    var black = 0
+    var purple = 0
 }
 
 class CubeLayer: SKNode {
@@ -145,7 +145,7 @@ class CubeLayer: SKNode {
                             oldDistroy.green -= distroy.green
                             oldDistroy.blue -= distroy.blue
                             oldDistroy.yellow -= distroy.yellow
-                            oldDistroy.black -= distroy.black
+                            oldDistroy.purple -= distroy.purple
                             (self.scene as! GameScene).showLayer.victoryNode.distroy = oldDistroy
                             
                             delay(0.5){
@@ -166,7 +166,7 @@ class CubeLayer: SKNode {
                     oldDistroy.green -= distroy.green
                     oldDistroy.blue -= distroy.blue
                     oldDistroy.yellow -= distroy.yellow
-                    oldDistroy.black -= distroy.black
+                    oldDistroy.purple -= distroy.purple
                     (self.scene as! GameScene).showLayer.victoryNode.distroy = oldDistroy
                     
                     //1秒后调用变幻
@@ -340,7 +340,7 @@ class CubeLayer: SKNode {
             case .Yellow:
                 distroy.yellow += 1
             case .Black:
-                distroy.black += 1
+                distroy.purple += 1
             default:
                 break
             }
