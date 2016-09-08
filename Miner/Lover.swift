@@ -61,6 +61,7 @@ class Lover: SKSpriteNode {
         let copyList = Array(cubeList).filter(){!$0.marked}
         if copyList.isEmpty{
             closure(true)
+            return
         }
         
         let cubeListCount = copyList.count
@@ -71,7 +72,6 @@ class Lover: SKSpriteNode {
            
             let index = Int(arc4random_uniform(UInt32(cubeListCount)))
             cube = copyList[index]
-            
             
             mainThread(){
                 

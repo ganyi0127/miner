@@ -62,12 +62,23 @@ class CubeLayer: SKNode {
         createContents()
     }
     
+    deinit{
+        
+        notification.removeObserver(self, name: "check", object: nil)
+    }
+    
     private func config(){
         
         position = .zero
         zPosition = ZPos.cube
      
         userInteractionEnabled = true
+        
+        notification.addObserver(self, selector: #selector(CubeLayer.preCheck), name: "check", object: nil)
+    }
+    
+    func preCheck(){
+        
     }
     
     private func createContents(){
@@ -236,6 +247,10 @@ class CubeLayer: SKNode {
     
     //MARK:检查是否有销毁
     private func check(closure:(distroy:Distroy)->()){
+        
+        guard !checkAction else{
+            return
+        }
         
         checkAction = true
         
