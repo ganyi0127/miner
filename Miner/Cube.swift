@@ -76,10 +76,13 @@ class Cube: SKSpriteNode {
             //修改并执行动画
             let posY = size.height / 2 + CGFloat(coordinate!.y!) * size.height
             
-            let mvAct = SKAction.moveToY(posY, duration: 0.5)
-            runAction(mvAct)
-            
             label.text = "x:\(coordinate!.x!)\ny:\(coordinate!.y!)"
+            
+            let mvAct = SKAction.moveToY(posY, duration: 0.5)
+            runAction(mvAct){
+                //完成动画调用检查
+                notification.postNotificationName("check", object: nil)
+            }
         }
     }
     
